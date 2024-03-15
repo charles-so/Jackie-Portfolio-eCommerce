@@ -1,0 +1,79 @@
+<!-- base.html -->
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      {% block title %}
+        jktrading
+      {% endblock %}
+    </title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <script src="{% static 'js/base.js' %}"></script>
+  </head>
+  <body>
+    <div class="whole-container">
+      <header>
+        <a id="go2github" href="https://github.com" target="_blank"><img src="{% static 'images/icons/github-384.png' %}" alt="Icon" /></a>
+        <section>
+          <h1>JKTRADING</h1>
+          <nav>
+            <ul>
+              <li>
+                <a href="{% url 'about' %}">About</a>
+              </li>
+              <li>
+                <a href="{% url 'coaching' %}">Coaching</a>
+              </li>
+              <li>
+                <a href="{% url 'productservice' %}">Products & Services</a>
+              </li>
+              <li>
+                <a href="{% url 'contact' %}">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </section>
+        <div class="hamburger-menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </header>
+
+      <div class="content">
+        <div class="hamburger-navbar">
+          <nav>
+            <ul>
+              <li>
+                <a href="{% url 'about' %}">About</a>
+              </li>
+              <li>
+                <a href="{% url 'coaching' %}">Coaching</a>
+              </li>
+              <li>
+                <a href="{% url 'productservice' %}">Products & Services</a>
+              </li>
+              <li>
+                <a href="{% url 'contact' %}">Contact</a>
+              </li>
+              <li>
+                <a id="go2github" href="https://github.com" target="_blank"><img src="{% static 'images/icons/github-384.png' %}" alt="Icon" /></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        {% block content %}
+
+        {% endblock %}
+      </div>
+
+      <footer>
+        <p>&copy; 2024 Jacky-Education</p>
+      </footer>
+    </div>
+  </body>
+</html>

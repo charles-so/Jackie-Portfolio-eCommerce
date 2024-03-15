@@ -1,0 +1,46 @@
+<!-- about.html -->
+{% extends 'base.html' %}
+
+{% block title %}About{% endblock %}
+{% load static %}
+{% block content %}
+<script src="{% static 'js/about.js' %}"></script>
+<div id="about">
+    <div id="porfolio">
+        <div class=left>
+            <img src="{% static 'images/portrait/albert-dera-ILip77SbmOE-unsplash.jpg' %}" alt="My Portrait">
+        </div>
+        <div class=right>
+            <h1>HI, I’M JACKY LI.</h1>
+            <h1>WELCOME TO A REALM OF FINANCIAL EXCELLENCE – YOUR GATEWAY TO SUCCESS IN THE FINANCE WORLD!</h1>
+            <p>Embark on a journey with me, an ambitious professional who has honed skills through internships at prestigious hedge funds and contributed to the credit team at JPMorgan. Currently pursuing a Master of Applied Finance at UWA, my sights are set on a fulfilling career as an investment analyst in Perth.</p>
+            <p>My experience has been a crucible of learning, and I've distilled invaluable insights for efficient study techniques and proactive career preparation. The secrets to success are waiting to be shared with you!</p>
+            <p>Explore the Coaching Section for personalized tutorial services that will elevate your financial acumen. Dive into the Products Section to discover powerful tools crafted to enhance your study sessions and preparation strategies.</p>
+            <p>Your success story begins here. Book a tutorial now, and let's shape a future of financial triumph together. Cheers to your journey to excellence!</p>
+        </div>
+    </div>
+
+    <div id="myapproach">
+        <div class=left>
+            <h1>My Approach<h1>
+        </div>
+        <div class=right>
+            <div class=upper-container>
+                <p>Redefine efficiency in learning with my approach - focus on the core, ditch the unnecessary, and grasp your objectives swiftly. Gain a comprehensive understanding and practical tools for real-world problem-solving in record time. Simplify your learning journey with impactful results.</p>
+            </div>
+            <div class=lower-container>
+                <div class=left>
+                    <h2>CFA LV1 LV2, APPLIED FINANCE</h2>
+                    <p>Sounds difficult? No worries, my mission is to demystify complex concepts, providing you with actionable tips to ace exams or excel in real-world projects – all explained in plain, human language.</p>
+                    <button id='button2coaching'>Book a coaching</button>
+                </div>
+                <div class=right>
+                    <h2>LEARNING TOOLS</h2>
+                    <p>Mastering a subject requires time and determination. Simplify your journey with my user-friendly learning tools, meticulously designed to effortlessly track your progres and success.</p>
+                    <button id='button2tools'>Get the tools</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

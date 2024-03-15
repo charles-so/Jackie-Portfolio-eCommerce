@@ -1,0 +1,68 @@
+<!-- about.html -->
+{% extends 'base.html' %}
+
+{% block title %}
+  Products & Services
+{% endblock %}
+{% load static %}
+{% block content %}
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="{% static 'js/productservice.js' %}"></script>
+  <div id="productservice">
+    <div class="learning-tools">
+      <div class="heading-container">
+        <h1>LEARNING TOOLS</h1>
+        <h3>Notion Template</h3>
+      </div>
+      <div class="product-item">
+        <div class="product-item-left">
+          <div class="product-container">
+            <div class="img-container">
+              <img id="product-1" src="{% static 'images/notion_template.png' %}" alt="notion template 1" />
+              <div class="buy-me">buy it now</div>
+            </div>
+            <div class="product-description">
+              <div class="left">
+                <h2>TEMPLATE_GOAL TRACKER AND REVISION TRACKER</h2>
+                <div class="price">
+                  <p>$6.00</p>
+                  <del>$10.00</del>
+                </div>
+              </div>
+              <div class="right">
+                <h2>SALE</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tutorial">
+      <div class="heading-container">
+        <h1>BOOK A TUTORIAL</h1>
+      </div>
+      <div class="content">
+        <div class="left">
+          <p>🌟 Unlock Your Accounting Potential with Personalized ACCT5432 Tutoring by Jacky! 🌟</p>
+          <p>Struggling with Introductory Financial Accounting [ACCT5432]? Meet your dedicated tutor, Jacky, and experience a personalized learning journey that will elevate your understanding of financial accounting.</p>
+          <p>📚 Why Choose Our Tutoring Service?</p>
+          <p>✨ Expert Guidance: Jacky achieved an High Distinction in this course and he is dedicated to helping you master ACCT5432. Benefit from personalized guidance tailored to your unique learning style.</p>
+          <p>✨ Flexible Learning: No rigid schedules! Our one-on-one sessions with Jacky provide the flexibility you need to accommodate your busy lifestyle. Focus on the areas that challenge you the most at your own pace.</p>
+          <p>✨ Interactive and Engaging: Forget about passive learning. Engage in meaningful discussions, ask questions, and receive immediate feedback from Jacky. Watch as complex concepts become clear through interactive teaching methods.</p>
+          <p>✨ Exam Success: Jacky is well-versed in the ACCT5432 curriculum and will work closely with you to ensure you are fully prepared for exams. Boost your confidence and perform at your best on test day.</p>
+          <p>🚀 Why Choose Personalized Tutoring?</p>
+          <p>🔍 Tailored Learning: Every session with Jacky is crafted to address your specific needs and concerns. Say goodbye to one-size-fits-all approaches; embrace a tutoring experience that revolves around you.</p>
+          <p>🔍 Accelerated Progress: With undivided attention from Jacky, progress quickly through challenging topics. Build a solid foundation that will serve you not just in exams but in your future accounting endeavors.</p>
+          <p>🔍 Holistic Support: It's not just about passing exams. Jacky is committed to your overall success and will guide you towards becoming a confident and competent accounting professional.</p>
+          <p>🎓 Invest in Your Academic Success Today!</p>
+          <p>Ready to conquer ACCT5432? Add this item to cart and book a schedule of your personalized tutoring sessions. Don't miss the opportunity to elevate your understanding of financial accounting and set the stage for a successful academic journey.</p>
+        </div>
+        <div class="right">
+          <!-- Cal inline embed code begins -->
+          <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline"></div>
+          <!-- Cal inline embed code ends -->
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

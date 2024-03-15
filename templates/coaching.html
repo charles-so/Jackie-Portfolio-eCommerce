@@ -1,0 +1,50 @@
+<!-- about.html -->
+{% extends 'base.html' %}
+
+{% block title %}
+  Coaching
+{% endblock %}
+{% load static %}
+{% block content %}
+  <script src="{% static 'js/coaching.js' %}"></script>
+  <div id="coaching">
+    <div class="container1">
+      <img src="{% static 'images/study-pic.jpg' %}" alt="study with me" />
+    </div>
+    <div class="container2">
+      <h2>OUR SESSION WILL BE</h2>
+      <div class="inner-container2">
+        <div class="left">
+          <h3>Personalized</h3>
+          <p>Our initial sessions will be dedicated to assessing your current progress and creating a personalized plan to fit your unique needs and goals.</p>
+        </div>
+        <div class="right">
+          <h3>Targeted</h3>
+          <p>Everyone has pain points when it comes to achieving academic excellence. I’ll work closely with you to help identify and overcome your challenges.</p>
+        </div>
+      </div>
+    </div>
+    <div class="container3">
+      <div class="inner-container">
+        <div class="left">
+          <h2>BOOK YOUR FREE CONSULTATION.</h2>
+          <ul>
+            <li>Comprehensive study assessment</li>
+            <li>Personalized study, exam preperation, and real-world project plan to help you reach your goals</li>
+            <li>Unlimited guidance and support via zoom</li>
+            <li>Helpful tools, tips, and tricks for navigating your unique obstacles</li>
+          </ul>
+          <button id="bookNow">Book Now</button>
+        </div>
+        <div class="right">
+          <img src="{% static 'images/lighthouse.jpg' %}" alt="a guide" />
+        </div>
+      </div>
+    </div>
+    <div class="container4">
+      <h2>FAQ</h2>
+      <p>I AM JUST A BEGINNER, CAN I HAVE THE COACHING?</p>
+      <p>Yes pal, no worries, the coaching is designed to help beginner to catch up with the core concepts and the techniques you can apply in the exams and real life projects.</p>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,14 @@
+<!-- about.html -->
+{% extends 'base.html' %}
+
+{% block title %}Success{% endblock %}
+{% load static %}
+{% block content %}
+<div id="success">
+    <img id="product-1" src="{% static 'images/icons/success.png' %}" alt="success" />
+    <h2>Yay, you're all set! 🎉</h2>
+    <h2>The payment is sorted and the Notion template is on its way! 🚀
+        Keep an eye on your inbox as your Notion template will be landing there shortly. If there's anything you need or any questions popping up, feel free to reach out through the contact form on my website. I'm here to help however I can!
+    </h2>
+</div>
+{% endblock %}
