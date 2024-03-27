@@ -6,7 +6,6 @@ from dotenv import load_dotenv
 load_dotenv()
 
 DOMAIN_URL = "https://localdev.charleso.site/"
-CAL_ULR = "https://cal.charleso.site"
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
