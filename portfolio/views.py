@@ -8,6 +8,7 @@ from django.core.mail import send_mail
 from .forms import ContactForm
 from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
+import os
 
 
 class AboutPageView(TemplateView):
@@ -15,6 +16,12 @@ class AboutPageView(TemplateView):
     
 class CoachingPageView(TemplateView):
     template_name = 'coaching.html'
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['CAL_URL'] = os.environ.get('CAL_URL')
+        print(context)
+        return context
 
 class ProductServicePageView(TemplateView):
     template_name = 'productservice.html'
@@ -34,7 +41,7 @@ def stripe_config(request):
 @csrf_exempt
 def create_checkout_session(request):
     if request.method == 'GET':
-        domain_url = settings.DOMAIN_URL
+        domain_url = os.environ.get('CSRF_TRUSTED_ORIGINS')
         stripe.api_key = settings.STRIPE_SECRET_KEY
         unit_amount = 600
         name = "Notion Template"
